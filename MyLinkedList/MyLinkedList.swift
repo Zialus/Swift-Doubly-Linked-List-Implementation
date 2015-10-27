@@ -1,6 +1,6 @@
 //
 //  MyLinkedList.swift
-//  QueueImplementation
+//  Doubly Linked List Implementation
 //
 //  Created by Ergin Bilgin on 20/10/15.
 //  Copyright © 2015 Ergin Bilgin. All rights reserved.

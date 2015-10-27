@@ -1,6 +1,6 @@
 //
 //  Queue.swift
-//  QueueImplementation
+//  Queue Implementation by Using Custom Made Doubly Linked List
 //
 //  Created by Ergin Bilgin on 28/09/15.
 //  Copyright © 2015 Ergin Bilgin. All rights reserved.
