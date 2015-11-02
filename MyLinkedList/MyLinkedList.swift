@@ -95,7 +95,7 @@ class MyLinkedList<T:NSObject> {
         }
     }
     
-    func getitemAt(position: Int) -> T? {
+    func getItemAt(position: Int) -> T? {
         if (self.count > position){                         // -if position exists
             var currentNode = self.head
             if (position == 0){                             // --if position is head

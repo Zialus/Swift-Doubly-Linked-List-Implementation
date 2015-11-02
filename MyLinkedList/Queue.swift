@@ -26,7 +26,7 @@ class Queue<T:NSObject> {
         if self.isEmpty(){
             return nil
         } else {
-            let temp: T = list.getitemAt(0)!
+            let temp: T = list.getItemAt(0)!
             list.removeItem(0)
             return temp
         }
