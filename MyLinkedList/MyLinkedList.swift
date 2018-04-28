@@ -55,7 +55,7 @@ class MyLinkedList<T:NSObject> {
     
     func removeLast() -> T?{
         if count == 0{
-            return 0 as! T
+            return nil
         }
         if (count == 1){
             let value = head.value
