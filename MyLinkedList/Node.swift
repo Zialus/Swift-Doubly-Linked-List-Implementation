@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Node<T:NSObject> {
+class Node<T:Comparable> {
     var value: T? = nil
     var next: Node<T>? = nil
     var prev: Node<T>? = nil

@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Queue<T:NSObject> {
+class Queue<T:Comparable> {
     var list: MyLinkedList<T> = MyLinkedList<T>()
     
     init() {

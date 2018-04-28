@@ -8,7 +8,7 @@
 
 import Foundation
 
-class MyLinkedList<T:NSObject> {
+class MyLinkedList<T:Comparable> {
     var count: Int = 0
     var head: Node<T> = Node<T>()
     var tail: Node<T> = Node<T>()

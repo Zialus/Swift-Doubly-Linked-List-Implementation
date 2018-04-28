@@ -9,25 +9,25 @@
 import Foundation
 
 print("Hello, World!")
-var list = MyLinkedList()
-list.addItem(1 as NSObject)
+var list = MyLinkedList<Int>()
+list.addItem(1)
 list.printList()
-list.addItem(2 as NSObject)
+list.addItem(2)
 list.printList()
-list.addItem(3 as NSObject)
+list.addItem(3)
 list.printList()
-list.insertItem(7 as NSObject, position: 1)
+list.insertItem(7, position: 1)
 list.printList()
 list.printInverse()
-list.insertItem(8 as NSObject, position: 0)
+list.insertItem(8, position: 0)
 list.printList()
 list.removeItem(4)
 list.printList()
-list.replaceItem(9 as NSObject, position: 3)
+list.replaceItem(9, position: 3)
 list.printList()
 print(list.getItemAt(4) as Any)
 
-var myq = Queue()
+var myq = Queue<Int>()
 //myq.enqueue(1)
 //myq.enqueue(2)
 //myq.enqueue(3)
@@ -82,26 +82,26 @@ var myq = Queue()
 
 
 //------CREATE INITIAL QUEUE---------
-myq.enqueue(5 as NSObject)
-myq.enqueue(7 as NSObject)
-myq.enqueue(9 as NSObject)
-myq.enqueue(11 as NSObject)
+myq.enqueue(5)
+myq.enqueue(7)
+myq.enqueue(9)
+myq.enqueue(11)
 myq.list.printList()
 //-----TEST CASES FOR ADD METHOD-----
-myq.list.add(88 as NSObject, position: 0) // at index 0
+myq.list.add(88, position: 0) // at index 0
 myq.list.printList()
-myq.list.add(99 as NSObject, position: 3) // at index somewhere between (3)
+myq.list.add(99, position: 3) // at index somewhere between (3)
 myq.list.printList()
-myq.list.add(77 as NSObject, position: 5) // at index of last (5)
+myq.list.add(77, position: 5) // at index of last (5)
 myq.list.printList()
-myq.list.add(66 as NSObject, position: -1)// at index doesn't exists (7) [DOESN'T DO ANYTHING)
-myq.list.add(66 as NSObject, position: 7) // at index doesn't exists (-1) [DOESN'T DO ANYTHING)
+myq.list.add(66, position: -1)// at index doesn't exists (7) [DOESN'T DO ANYTHING)
+myq.list.add(66, position: 7) // at index doesn't exists (-1) [DOESN'T DO ANYTHING)
 myq.list.printList()
 //-----TEST CASES FOR INDEXOF METHOD-----
-print(myq.list.indexOf(88 as NSObject)) // FIRST ITEM
-print(myq.list.indexOf(7 as NSObject))  // SOMEWHERE MIDDLE
-print(myq.list.indexOf(11 as NSObject)) // LAST ITEM
-print(myq.list.indexOf(45 as NSObject)) // DOESNT EXIST
+print(myq.list.indexOf(88)) // FIRST ITEM
+print(myq.list.indexOf(7))  // SOMEWHERE MIDDLE
+print(myq.list.indexOf(11)) // LAST ITEM
+print(myq.list.indexOf(45)) // DOESNT EXIST
 //---TEST CASES FOR REMOVELAST METHOD----
 print(myq.list.removeLast() as Any) // REMOVES AND RETURNS
 print(myq.list.removeLast() as Any) // REMOVES AND RETURNS
