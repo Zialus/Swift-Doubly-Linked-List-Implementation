@@ -103,11 +103,11 @@ print(myq.list.indexOf(7 as NSObject))  // SOMEWHERE MIDDLE
 print(myq.list.indexOf(11 as NSObject)) // LAST ITEM
 print(myq.list.indexOf(45 as NSObject)) // DOESNT EXIST
 //---TEST CASES FOR REMOVELAST METHOD----
-print(myq.list.removeLast()) // REMOVES AND RETURNS
-print(myq.list.removeLast()) // REMOVES AND RETURNS
-print(myq.list.removeLast()) // REMOVES AND RETURNS
-print(myq.list.removeLast()) // REMOVES AND RETURNS
-print(myq.list.removeLast()) // REMOVES AND RETURNS
-print(myq.list.removeLast()) // REMOVES AND RETURNS
-print(myq.list.removeLast()) // REMOVES AND RETURNS
-print(myq.list.removeLast()) // EMPTY LIST RETURNS NIL
+print(myq.list.removeLast() as Any) // REMOVES AND RETURNS
+print(myq.list.removeLast() as Any) // REMOVES AND RETURNS
+print(myq.list.removeLast() as Any) // REMOVES AND RETURNS
+print(myq.list.removeLast() as Any) // REMOVES AND RETURNS
+print(myq.list.removeLast() as Any) // REMOVES AND RETURNS
+print(myq.list.removeLast() as Any) // REMOVES AND RETURNS
+print(myq.list.removeLast() as Any) // REMOVES AND RETURNS
+print(myq.list.removeLast() as Any) // EMPTY LIST RETURNS NIL
