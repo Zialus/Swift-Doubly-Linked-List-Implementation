@@ -18,7 +18,7 @@ class Queue<T:NSObject> {
         return self.list.isEmpty()
     }
     
-    func enqueue(value: T) {
+    func enqueue(_ value: T) {
         list.addItem(value)
     }
     

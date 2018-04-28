@@ -20,8 +20,8 @@ class MyLinkedList<T:NSObject> {
         return self.count == 0
     }
     
-    func addItem(value: T) {
-        var node = Node<T>(value: value)
+    func addItem(_ value: T) {
+        let node = Node<T>(value: value)
         if self.isEmpty() {
             self.head = node
             self.tail = node
@@ -30,12 +30,12 @@ class MyLinkedList<T:NSObject> {
             self.tail.next = node
             self.tail = node
         }
-        self.count++
+        self.count += 1
     }
     
     //############ indexOf METHOD FOR TEST ################
     
-    func indexOf (itemToFind: T) -> Int{
+    func indexOf (_ itemToFind: T) -> Int{
         var index = 0
         if (self.count > 0){                         // -if position exists
             var currentNode: Node? = self.head
@@ -43,7 +43,7 @@ class MyLinkedList<T:NSObject> {
                 if currentNode!.value! == itemToFind{
                     return index
                 }
-                index++
+                index += 1
                 currentNode = currentNode!.next
             }
         }
@@ -61,20 +61,20 @@ class MyLinkedList<T:NSObject> {
             let value = head.value
             head = Node<T>()
             tail = Node<T>()
-            self.count--
+            self.count -= 1
             return value
         }
         let value = self.tail.value
         self.tail.prev!.next = tail.next
         self.tail = tail.prev!
-        self.count--
+        self.count -= 1
         return value
     }
     
     //############ add METHOD FOR TEST ################
 
     
-    func add(value: T, position: Int){
+    func add(_ value: T, position: Int){
         let node = Node<T>(value: value)
         if (self.count > position && position >= 0) {            // -if position exists
             if (position == 0){                 // --if position is head
@@ -91,12 +91,12 @@ class MyLinkedList<T:NSObject> {
                 currentNode.prev!.next = node
                 currentNode.prev = node
             }
-            self.count++
+            self.count += 1
         }
     }
 
     
-    func insertItem(value: T, position: Int){
+    func insertItem(_ value: T, position: Int){
         let node = Node<T>(value: value)
         if (self.count > position) {            // -if position exists
             if (position == 0){                 // --if position is head
@@ -113,11 +113,11 @@ class MyLinkedList<T:NSObject> {
                 currentNode.prev!.next = node
                 currentNode.prev = node
             }
-            self.count++
+            self.count += 1
         }
     }
     
-    func removeItem(position: Int) {
+    func removeItem(_ position: Int) {
         if (self.count > position){                             // -if position exists
             if (self.count != 1){
                 if (position == 0){                             // --if position is head
@@ -140,11 +140,11 @@ class MyLinkedList<T:NSObject> {
                 head = Node<T>()
                 tail = Node<T>()
             }
-            self.count--
+            self.count -= 1
         }
     }
     
-    func replaceItem(itemToReplace: T, position: Int) {
+    func replaceItem(_ itemToReplace: T, position: Int) {
         if (self.count > position){                         // -if position exists
             var currentNode = self.head
             if (position == 0){                             // --if position is head
@@ -160,7 +160,7 @@ class MyLinkedList<T:NSObject> {
     
     
     
-    func getItemAt(position: Int) -> T? {
+    func getItemAt(_ position: Int) -> T? {
         if (self.count > position){                         // -if position exists
             var currentNode = self.head
             if (position == 0){                             // --if position is head
@@ -181,7 +181,7 @@ class MyLinkedList<T:NSObject> {
         var output: String = "["
         var currentNode: Node? = self.head
         while (currentNode != nil) {
-            output += String(currentNode!.value)
+            output += String(describing: currentNode!.value)
             currentNode = currentNode!.next
             if (currentNode != nil){                // If statement is for avoid "," sign at the end.
                 output += ", "
@@ -195,7 +195,7 @@ class MyLinkedList<T:NSObject> {
         var output: String = "["
         var currentNode: Node? = self.tail
         while (currentNode != nil) {
-            output += String(currentNode!.value)
+            output += String(describing: currentNode!.value)
             currentNode = currentNode!.prev
             if (currentNode != nil){                // If statement is for avoid "," sign at the end.
                 output += ", "
