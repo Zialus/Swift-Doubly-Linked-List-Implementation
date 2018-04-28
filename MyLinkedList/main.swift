@@ -82,26 +82,26 @@ var myq = Queue()
 
 
 //------CREATE INITIAL QUEUE---------
-myq.enqueue(5)
-myq.enqueue(7)
-myq.enqueue(9)
-myq.enqueue(11)
+myq.enqueue(5 as NSObject)
+myq.enqueue(7 as NSObject)
+myq.enqueue(9 as NSObject)
+myq.enqueue(11 as NSObject)
 myq.list.printList()
 //-----TEST CASES FOR ADD METHOD-----
-myq.list.add(88, position: 0) // at index 0
+myq.list.add(88 as NSObject, position: 0) // at index 0
 myq.list.printList()
-myq.list.add(99, position: 3) // at index somewhere between (3)
+myq.list.add(99 as NSObject, position: 3) // at index somewhere between (3)
 myq.list.printList()
-myq.list.add(77, position: 5) // at index of last (5)
+myq.list.add(77 as NSObject, position: 5) // at index of last (5)
 myq.list.printList()
-myq.list.add(66, position: -1)// at index doesn't exists (7) [DOESN'T DO ANYTHING)
-myq.list.add(66, position: 7) // at index doesn't exists (-1) [DOESN'T DO ANYTHING)
+myq.list.add(66 as NSObject, position: -1)// at index doesn't exists (7) [DOESN'T DO ANYTHING)
+myq.list.add(66 as NSObject, position: 7) // at index doesn't exists (-1) [DOESN'T DO ANYTHING)
 myq.list.printList()
 //-----TEST CASES FOR INDEXOF METHOD-----
-print(myq.list.indexOf(88)) // FIRST ITEM
-print(myq.list.indexOf(7))  // SOMEWHERE MIDDLE
-print(myq.list.indexOf(11)) // LAST ITEM
-print(myq.list.indexOf(45)) // DOESNT EXIST
+print(myq.list.indexOf(88 as NSObject)) // FIRST ITEM
+print(myq.list.indexOf(7 as NSObject))  // SOMEWHERE MIDDLE
+print(myq.list.indexOf(11 as NSObject)) // LAST ITEM
+print(myq.list.indexOf(45 as NSObject)) // DOESNT EXIST
 //---TEST CASES FOR REMOVELAST METHOD----
 print(myq.list.removeLast()) // REMOVES AND RETURNS
 print(myq.list.removeLast()) // REMOVES AND RETURNS
