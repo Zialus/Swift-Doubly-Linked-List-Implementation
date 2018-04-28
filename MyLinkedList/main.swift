@@ -9,7 +9,7 @@
 import Foundation
 
 print("Hello, World!")
-var list = MyLinkedList<Int>()
+var list = LinkedList<Int>()
 list.addItem(1)
 list.printList()
 list.addItem(2)

@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		81BBD0BB1BDF67730087C42D /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BBD0BA1BDF67730087C42D /* main.swift */; };
 		81BBD0C21BDF678E0087C42D /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BBD0C11BDF678E0087C42D /* Node.swift */; };
-		81BBD0C41BDF679E0087C42D /* MyLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BBD0C31BDF679E0087C42D /* MyLinkedList.swift */; };
+		81BBD0C41BDF679E0087C42D /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BBD0C31BDF679E0087C42D /* LinkedList.swift */; };
 		81BBD0C61BDF67D20087C42D /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BBD0C51BDF67D20087C42D /* Queue.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,7 +29,7 @@
 		81BBD0B71BDF67730087C42D /* MyLinkedList */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MyLinkedList; sourceTree = BUILT_PRODUCTS_DIR; };
 		81BBD0BA1BDF67730087C42D /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		81BBD0C11BDF678E0087C42D /* Node.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
-		81BBD0C31BDF679E0087C42D /* MyLinkedList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyLinkedList.swift; sourceTree = "<group>"; };
+		81BBD0C31BDF679E0087C42D /* LinkedList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
 		81BBD0C51BDF67D20087C42D /* Queue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -65,7 +65,7 @@
 			children = (
 				81BBD0BA1BDF67730087C42D /* main.swift */,
 				81BBD0C11BDF678E0087C42D /* Node.swift */,
-				81BBD0C31BDF679E0087C42D /* MyLinkedList.swift */,
+				81BBD0C31BDF679E0087C42D /* LinkedList.swift */,
 				81BBD0C51BDF67D20087C42D /* Queue.swift */,
 			);
 			path = MyLinkedList;
@@ -128,7 +128,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81BBD0C41BDF679E0087C42D /* MyLinkedList.swift in Sources */,
+				81BBD0C41BDF679E0087C42D /* LinkedList.swift in Sources */,
 				81BBD0BB1BDF67730087C42D /* main.swift in Sources */,
 				81BBD0C21BDF678E0087C42D /* Node.swift in Sources */,
 				81BBD0C61BDF67D20087C42D /* Queue.swift in Sources */,

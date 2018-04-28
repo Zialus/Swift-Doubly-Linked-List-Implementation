@@ -9,7 +9,7 @@
 import Foundation
 
 class Queue<T:Comparable> {
-    var list: MyLinkedList<T> = MyLinkedList<T>()
+    var list: LinkedList<T> = LinkedList<T>()
     
     init() {
     }

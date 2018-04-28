@@ -8,7 +8,7 @@
 
 import Foundation
 
-class MyLinkedList<T:Comparable> {
+class LinkedList<T:Comparable> {
     var count: Int = 0
     var head: Node<T> = Node<T>()
     var tail: Node<T> = Node<T>()
