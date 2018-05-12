@@ -9,15 +9,9 @@
 import Foundation
 
 class Node<T:Comparable> {
-    var value: T?
+    var value: T
     var next: Node<T>?
     var prev: Node<T>?
-
-    init() {
-        self.value = nil
-        self.next = nil
-        self.prev = nil
-    }
 
     init(value: T) {
         self.value = value

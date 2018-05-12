@@ -10,13 +10,13 @@ import Foundation
 
 class LinkedList<T:Comparable> {
     var count: Int
-    var head: Node<T>
-    var tail: Node<T>
+    var head: Node<T>?
+    var tail: Node<T>?
 
     init() {
         count = 0
-        head = Node<T>()
-        tail = Node<T>()
+        head = nil
+        tail = nil
     }
     
     func isEmpty() -> Bool {
@@ -30,7 +30,7 @@ class LinkedList<T:Comparable> {
             self.tail = node
         } else {
             node.prev = self.tail
-            self.tail.next = node
+            self.tail!.next = node
             self.tail = node
         }
         self.count += 1
@@ -43,7 +43,7 @@ class LinkedList<T:Comparable> {
         if (self.count > 0){                         // -if position exists
             var currentNode: Node? = self.head
             while (currentNode != nil) {
-                if currentNode!.value! == itemToFind{
+                if currentNode!.value == itemToFind{
                     return index
                 }
                 index += 1
@@ -61,15 +61,15 @@ class LinkedList<T:Comparable> {
             return nil
         }
         if (count == 1){
-            let value = head.value
-            head = Node<T>()
-            tail = Node<T>()
+            let value = head!.value
+            head = nil
+            tail = nil
             self.count -= 1
             return value
         }
-        let value = self.tail.value
-        self.tail.prev!.next = tail.next
-        self.tail = tail.prev!
+        let value = self.tail!.value
+        self.tail!.prev!.next = tail!.next
+        self.tail = tail!.prev!
         self.count -= 1
         return value
     }
@@ -82,17 +82,17 @@ class LinkedList<T:Comparable> {
         if (self.count > position && position >= 0) {            // -if position exists
             if (position == 0){                 // --if position is head
                 node.next = self.head
-                self.head.prev = node
+                self.head!.prev = node
                 self.head = node
             } else {                            // --if position is not head
                 var currentNode = self.head
                 for _ in 0...position-1 {
-                    currentNode = currentNode.next!
+                    currentNode = currentNode!.next!
                 }
                 node.next = currentNode
-                node.prev = currentNode.prev
-                currentNode.prev!.next = node
-                currentNode.prev = node
+                node.prev = currentNode!.prev
+                currentNode!.prev!.next = node
+                currentNode!.prev = node
             }
             self.count += 1
         }
@@ -104,17 +104,17 @@ class LinkedList<T:Comparable> {
         if (self.count > position) {            // -if position exists
             if (position == 0){                 // --if position is head
                 node.next = self.head
-                self.head.prev = node
+                self.head!.prev = node
                 self.head = node
             } else {                            // --if position is not head
                 var currentNode = self.head
                 for _ in 0...position-1 {
-                    currentNode = currentNode.next!
+                    currentNode = currentNode!.next!
                 }
                 node.next = currentNode
-                node.prev = currentNode.prev
-                currentNode.prev!.next = node
-                currentNode.prev = node
+                node.prev = currentNode!.prev
+                currentNode!.prev!.next = node
+                currentNode!.prev = node
             }
             self.count += 1
         }
@@ -124,24 +124,24 @@ class LinkedList<T:Comparable> {
         if (self.count > position){                             // -if position exists
             if (self.count != 1){
                 if (position == 0){                             // --if position is head
-                    self.head.next!.prev = head.prev
-                    self.head = head.next!
+                    self.head!.next!.prev = head!.prev
+                    self.head = head!.next!
                 }
                 if (position == self.count-1){                  // --if position is tail
-                    self.tail.prev!.next = tail.next
-                    self.tail = tail.prev!
+                    self.tail!.prev!.next = tail!.next
+                    self.tail = tail!.prev!
                 }
                 if (position > 0 && position < count-1){        // --if position at middle
                     var currentNode = self.head
                     for _ in 0...position-1 {
-                        currentNode = currentNode.next!
+                        currentNode = currentNode!.next!
                     }
-                    currentNode.next!.prev = currentNode.prev
-                    currentNode.prev!.next = currentNode.next
+                    currentNode!.next!.prev = currentNode!.prev
+                    currentNode!.prev!.next = currentNode!.next
                 }
             } else {                                            // -if last node
-                head = Node<T>()
-                tail = Node<T>()
+                head = nil
+                tail = nil
             }
             self.count -= 1
         }
@@ -151,12 +151,12 @@ class LinkedList<T:Comparable> {
         if (self.count > position){                         // -if position exists
             var currentNode = self.head
             if (position == 0){                             // --if position is head
-                currentNode.value = itemToReplace
+                currentNode!.value = itemToReplace
             } else {                                        // --if position is not head
                 for _ in 0...position-1{
-                    currentNode = currentNode.next!
+                    currentNode = currentNode!.next!
                 }
-                currentNode.value = itemToReplace
+                currentNode!.value = itemToReplace
             }
         }
     }
@@ -167,12 +167,12 @@ class LinkedList<T:Comparable> {
         if (self.count > position){                         // -if position exists
             var currentNode = self.head
             if (position == 0){                             // --if position is head
-                return currentNode.value
+                return currentNode!.value
             } else {                                        // --if posisiton is not head
                 for _ in 0...position-1{
-                    currentNode = currentNode.next!
+                    currentNode = currentNode!.next!
                 }
-                return currentNode.value
+                return currentNode!.value
             }
         } else {
             return nil                                      // -- if position doesn't exist
