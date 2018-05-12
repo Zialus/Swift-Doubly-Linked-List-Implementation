@@ -9,11 +9,14 @@
 import Foundation
 
 class LinkedList<T:Comparable> {
-    var count: Int = 0
-    var head: Node<T> = Node<T>()
-    var tail: Node<T> = Node<T>()
-    
+    var count: Int
+    var head: Node<T>
+    var tail: Node<T>
+
     init() {
+        count = 0
+        head = Node<T>()
+        tail = Node<T>()
     }
     
     func isEmpty() -> Bool {

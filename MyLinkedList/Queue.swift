@@ -9,9 +9,10 @@
 import Foundation
 
 class Queue<T:Comparable> {
-    var list: LinkedList<T> = LinkedList<T>()
+    var list: LinkedList<T>
     
     init() {
+        self.list = LinkedList<T>()
     }
     
     func isEmpty() -> Bool {
