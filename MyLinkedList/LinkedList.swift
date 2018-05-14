@@ -38,22 +38,23 @@ class LinkedList<T: Comparable> {
 
         self.count += 1
     }
-    
-    //############ indexOf METHOD FOR TEST ################
-    
-    func indexOf (_ itemToFind: T) -> Int{
-        var index = 0
-        if (self.count > 0){                         // -if position exists
-            var currentNode: Node? = self.head
-            while (currentNode != nil) {
-                if currentNode!.value == itemToFind{
+
+    func indexOf (_ itemToFind: T) -> Int? {
+        if self.isEmpty() {
+            return nil
+        } else {
+            var index = 0
+            var currentNode = self.head
+            while currentNode != nil {
+                if currentNode!.value == itemToFind {
                     return index
+                } else {
+                    index += 1
+                    currentNode = currentNode!.next
                 }
-                index += 1
-                currentNode = currentNode!.next
             }
+            return nil
         }
-        return -1
     }
     
     //############ removeLast METHOD FOR TEST ################
