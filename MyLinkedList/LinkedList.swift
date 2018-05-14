@@ -56,26 +56,16 @@ class LinkedList<T: Comparable> {
             return nil
         }
     }
-    
-    //############ removeLast METHOD FOR TEST ################
 
-    
-    func removeLast() -> T?{
-        if count == 0{
+    func removeLast() -> T? {
+        let lastPos = self.count - 1
+        if lastPos < 0 {
             return nil
-        }
-        if (count == 1){
-            let value = head!.value
-            head = nil
-            tail = nil
-            self.count -= 1
+        } else {
+            let value = getItemAt(lastPos)
+            removeItem(lastPos)
             return value
         }
-        let value = self.tail!.value
-        self.tail!.prev!.next = tail!.next
-        self.tail = tail!.prev!
-        self.count -= 1
-        return value
     }
 
     //############ add METHOD FOR TEST ################
