@@ -25,14 +25,17 @@ class LinkedList<T: Comparable> {
 
     func addItem(_ value: T) {
         let node = Node<T>(value: value)
-        if self.isEmpty() {
+
+        if let tail = self.tail {
+            node.prev = tail
+            tail.next = node
+            self.tail = node
+
+        } else {
             self.head = node
             self.tail = node
-        } else {
-            node.prev = self.tail
-            self.tail!.next = node
-            self.tail = node
         }
+
         self.count += 1
     }
     
