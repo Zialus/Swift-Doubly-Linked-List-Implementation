@@ -68,8 +68,6 @@ class LinkedList<T: Comparable> {
         }
     }
 
-    //############ add METHOD FOR TEST ################
-
     func add(_ value: T, position: Int) {
         let node = Node<T>(value: value)
         if self.count > position && position >= 0 {  // if position exists
@@ -78,27 +76,6 @@ class LinkedList<T: Comparable> {
                 self.head!.prev = node
                 self.head = node
             } else {                                 // if position is not head
-                var currentNode = self.head
-                for _ in 0...position-1 {
-                    currentNode = currentNode!.next!
-                }
-                node.next = currentNode
-                node.prev = currentNode!.prev
-                currentNode!.prev!.next = node
-                currentNode!.prev = node
-            }
-            self.count += 1
-        }
-    }
-
-    func insertItem(_ value: T, position: Int) {
-        let node = Node<T>(value: value)
-        if self.count > position {            // if position exists
-            if position == 0 {                // if position is head
-                node.next = self.head
-                self.head!.prev = node
-                self.head = node
-            } else {                          // if position is not head
                 var currentNode = self.head
                 for _ in 0...position-1 {
                     currentNode = currentNode!.next!
