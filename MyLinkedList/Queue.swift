@@ -8,29 +8,29 @@
 
 import Foundation
 
-class Queue<T:Comparable> {
+class Queue<T: Comparable> {
     var list: LinkedList<T>
-    
+
     init() {
         self.list = LinkedList<T>()
     }
-    
+
     func isEmpty() -> Bool {
         return self.list.isEmpty()
     }
-    
+
     func enqueue(_ value: T) {
         list.addItem(value)
     }
-    
+
     func dequeue() -> T? {
-        if self.isEmpty(){
+        if self.isEmpty() {
             return nil
         } else {
             let temp: T = list.getItemAt(0)!
             list.removeItem(0)
             return temp
         }
-        
+
     }
 }

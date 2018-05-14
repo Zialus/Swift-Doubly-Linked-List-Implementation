@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Node<T:Comparable> {
+class Node<T: Comparable> {
     var value: T
     var next: Node<T>?
     var prev: Node<T>?
