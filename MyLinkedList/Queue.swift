@@ -20,17 +20,18 @@ class Queue<T: Comparable> {
     }
 
     func enqueue(_ value: T) {
-        list.addItem(value)
+        list.addLast(value)
     }
 
     func dequeue() -> T? {
         if self.isEmpty() {
             return nil
         } else {
-            let temp: T = list.getItemAt(0)!
-            list.removeItem(0)
+            let temp: T = list.getItem(at: 0)!
+            list.removeItem(at: 0)
             return temp
         }
 
     }
+
 }

@@ -23,7 +23,7 @@ class LinkedList<T: Comparable> {
         return self.count == 0
     }
 
-    func addItem(_ value: T) {
+    func addLast(_ value: T) {
         let node = Node<T>(value: value)
 
         if let tail = self.tail {
@@ -62,13 +62,13 @@ class LinkedList<T: Comparable> {
         if lastPos < 0 {
             return nil
         } else {
-            let value = getItemAt(lastPos)
-            removeItem(lastPos)
+            let value = getItem(at: lastPos)
+            removeItem(at: lastPos)
             return value
         }
     }
 
-    func add(_ value: T, position: Int) {
+    func insertItem(value: T, position: Int) {
         let node = Node<T>(value: value)
         if self.count > position && position >= 0 {  // if position exists
             if position == 0 {                       // if position is head
@@ -89,7 +89,7 @@ class LinkedList<T: Comparable> {
         }
     }
 
-    func removeItem(_ position: Int) {
+    func removeItem(at position: Int) {
         if self.count > position {                             // if position exists
             if self.count != 1 {
                 if position == 0 {                             // if position is head
@@ -130,7 +130,7 @@ class LinkedList<T: Comparable> {
         }
     }
 
-    func getItemAt(_ position: Int) -> T? {
+    func getItem(at position: Int) -> T? {
         if self.count > position {                         // if position exists
             var currentNode = self.head
             if position == 0 {                             // if position is head
