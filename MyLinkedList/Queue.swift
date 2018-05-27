@@ -16,7 +16,7 @@ class Queue<T: Comparable> {
     }
 
     func isEmpty() -> Bool {
-        return self.list.isEmpty()
+        return self.list.isEmpty
     }
 
     func enqueue(_ value: T) {

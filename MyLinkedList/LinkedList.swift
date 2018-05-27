@@ -19,7 +19,7 @@ class LinkedList<T: Comparable> {
         tail = nil
     }
 
-    func isEmpty() -> Bool {
+    var isEmpty: Bool {
         return self.count == 0
     }
 
@@ -39,8 +39,8 @@ class LinkedList<T: Comparable> {
         self.count += 1
     }
 
-    func indexOf (_ itemToFind: T) -> Int? {
-        if self.isEmpty() {
+    func indexOf(_ itemToFind: T) -> Int? {
+        if self.isEmpty {
             return nil
         } else {
             var index = 0
