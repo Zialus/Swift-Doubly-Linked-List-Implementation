@@ -117,7 +117,7 @@ class LinkedList<T: Comparable> {
     }
 
     func replaceItem(_ itemToReplace: T, position: Int) {
-        if self.count > position {                         // if position exists
+        if self.count > position && position >= 0 {        // if position exists
             var currentNode = self.head
             if position == 0 {                             // if position is head
                 currentNode!.value = itemToReplace
