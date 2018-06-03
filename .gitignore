@@ -1,7 +1,4 @@
-*.plist
-*.xcworkspace
-xcuserdata/
-xcshareddata/
+*.xcodeproj
 DerivedData/
 .idea/
 .build/
