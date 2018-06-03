@@ -1,0 +1,7 @@
+*.plist
+*.xcworkspace
+xcuserdata/
+xcshareddata/
+DerivedData/
+.idea/
+.build/
