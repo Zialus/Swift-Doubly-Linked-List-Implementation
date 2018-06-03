@@ -12,7 +12,7 @@ let package = Package(
             name: "Main",
             dependencies: ["LinkedList"]),
         .testTarget(
-            name: "LinkedListTest",
+            name: "LinkedListTests",
             dependencies: ["LinkedList"])
     ]
 )

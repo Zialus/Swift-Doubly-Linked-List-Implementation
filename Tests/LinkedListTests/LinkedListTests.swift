@@ -1,7 +1,7 @@
 import XCTest
 @testable import LinkedList
 
-final class LinkedListTest: XCTestCase {
+final class LinkedListTests: XCTestCase {
     fileprivate let numbers = [8, 2, 10, 9, 7, 5]
 
     fileprivate func buildList() -> LinkedList<Int> {
