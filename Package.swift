@@ -11,5 +11,8 @@ let package = Package(
         .target(
             name: "Main",
             dependencies: ["LinkedList"]),
+        .testTarget(
+            name: "LinkedListTest",
+            dependencies: ["LinkedList"])
     ]
 )
