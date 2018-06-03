@@ -8,10 +8,10 @@
 
 import Foundation
 
-class Queue<T: Comparable> {
-    var list: LinkedList<T>
+public class Queue<T: Comparable> {
+    public var list: LinkedList<T>
 
-    init() {
+    public init() {
         self.list = LinkedList<T>()
     }
 
@@ -19,11 +19,11 @@ class Queue<T: Comparable> {
         return self.list.isEmpty
     }
 
-    func enqueue(_ value: T) {
+    public func enqueue(_ value: T) {
         list.addLast(value)
     }
 
-    func dequeue() -> T? {
+    public func dequeue() -> T? {
         if self.isEmpty() {
             return nil
         } else {

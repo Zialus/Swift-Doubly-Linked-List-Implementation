@@ -8,12 +8,12 @@
 
 import Foundation
 
-class LinkedList<T: Comparable> {
-    var count: Int
+public class LinkedList<T: Comparable> {
+    public var count: Int
     var head: Node<T>?
     var tail: Node<T>?
 
-    init() {
+    public init() {
         count = 0
         head = nil
         tail = nil
@@ -23,7 +23,7 @@ class LinkedList<T: Comparable> {
         return self.count == 0
     }
 
-    func addLast(_ value: T) {
+    public func addLast(_ value: T) {
         let node = Node<T>(value: value)
 
         if let tail = self.tail {
@@ -39,7 +39,7 @@ class LinkedList<T: Comparable> {
         self.count += 1
     }
 
-    func indexOf(_ itemToFind: T) -> Int? {
+    public func indexOf(_ itemToFind: T) -> Int? {
         if self.isEmpty {
             return nil
         } else {
@@ -57,7 +57,7 @@ class LinkedList<T: Comparable> {
         }
     }
 
-    func removeLast() -> T? {
+    public func removeLast() -> T? {
         let lastPos = self.count - 1
         if lastPos < 0 {
             return nil
@@ -68,7 +68,7 @@ class LinkedList<T: Comparable> {
         }
     }
 
-    func insertItem(value: T, position: Int) {
+    public func insertItem(value: T, position: Int) {
         let node = Node<T>(value: value)
         if self.count > position && position >= 0 {  // if position exists
             if position == 0 {                       // if position is head
@@ -89,7 +89,7 @@ class LinkedList<T: Comparable> {
         }
     }
 
-    func removeItem(at position: Int) {
+    public func removeItem(at position: Int) {
         if self.count > position {                             // if position exists
             if self.count != 1 {
                 if position == 0 {                             // if position is head
@@ -116,7 +116,7 @@ class LinkedList<T: Comparable> {
         }
     }
 
-    func replaceItem(_ itemToReplace: T, position: Int) {
+    public func replaceItem(_ itemToReplace: T, position: Int) {
         if self.count > position && position >= 0 {        // if position exists
             var currentNode = self.head
             if position == 0 {                             // if position is head
@@ -130,7 +130,7 @@ class LinkedList<T: Comparable> {
         }
     }
 
-    func getItem(at position: Int) -> T? {
+    public func getItem(at position: Int) -> T? {
         if self.count > position {                         // if position exists
             var currentNode = self.head
             if position == 0 {                             // if position is head
@@ -147,7 +147,7 @@ class LinkedList<T: Comparable> {
 
     }
 
-    func printList() {
+    public func printList() {
         var output: String = "["
         var currentNode: Node? = self.head
         while currentNode != nil {
@@ -161,7 +161,7 @@ class LinkedList<T: Comparable> {
         print(output)
     }
 
-    func printInverse() {
+    public func printInverse() {
         var output: String = "["
         var currentNode: Node? = self.tail
         while currentNode != nil {

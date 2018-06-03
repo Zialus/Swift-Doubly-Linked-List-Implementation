@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import LinkedList
 
 print("Hello, World!")
 var list = LinkedList<Int>()
