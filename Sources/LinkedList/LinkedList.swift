@@ -149,26 +149,29 @@ public class LinkedList<T: Comparable> {
 
     public func printList() {
         var output: String = "["
-        var currentNode: Node? = self.head
-        while currentNode != nil {
-            output += String(describing: currentNode!.value)
-            currentNode = currentNode!.next
-            if currentNode != nil {     // if statement is for avoid "," sign at the end.
+        if let firstNode = self.head {
+            output += String(describing: firstNode.value)
+            var currentNode = firstNode.next
+            while currentNode != nil {
                 output += ", "
+                output += String(describing: currentNode!.value)
+                currentNode = currentNode!.next
             }
         }
         output += "]"
         print(output)
+
     }
 
-    public func printInverse() {
+    public func printInverseList() {
         var output: String = "["
-        var currentNode: Node? = self.tail
-        while currentNode != nil {
-            output += String(describing: currentNode!.value)
-            currentNode = currentNode!.prev
-            if currentNode != nil {     // if statement is for avoid "," sign at the end.
+        if let firstNode = self.tail {
+            output += String(describing: firstNode.value)
+            var currentNode = firstNode.prev
+            while currentNode != nil {
                 output += ", "
+                output += String(describing: currentNode!.value)
+                currentNode = currentNode!.prev
             }
         }
         output += "]"
