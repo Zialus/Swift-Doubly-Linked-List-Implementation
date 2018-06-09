@@ -332,6 +332,10 @@ final class LinkedListTests: XCTestCase {
 //    }
 
     static var allTests = [
-        ("testEmptyList", testEmptyList)
+        ("testEmptyList", testEmptyList),
+        ("testListWithOneElement",testListWithOneElement),
+        ("testListWithTwoElements",testListWithTwoElements),
+        ("testListWithThreeElements",testListWithThreeElements),
+        ("testRemoveLastOnListWithOneElement",testRemoveLastOnListWithOneElement)
     ]
 }
