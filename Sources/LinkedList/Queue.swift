@@ -1,11 +1,3 @@
-//
-//  Queue.swift
-//  Queue Implementation by Using Custom Made Doubly Linked List
-//
-//  Created by Ergin Bilgin on 28/09/15.
-//  Copyright © 2015 Ergin Bilgin. All rights reserved.
-//
-
 import Foundation
 
 public class Queue<T: Comparable> {
@@ -15,7 +7,7 @@ public class Queue<T: Comparable> {
         self.list = LinkedList<T>()
     }
 
-    func isEmpty() -> Bool {
+    var isEmpty: Bool {
         return self.list.isEmpty
     }
 
@@ -24,7 +16,7 @@ public class Queue<T: Comparable> {
     }
 
     public func dequeue() -> T? {
-        if self.isEmpty() {
+        if self.isEmpty {
             return nil
         } else {
             let temp: T = list.getItem(at: 0)!
