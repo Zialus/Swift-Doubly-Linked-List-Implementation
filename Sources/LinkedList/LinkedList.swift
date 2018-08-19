@@ -147,22 +147,6 @@ public class LinkedList<T: Comparable> {
 
     }
 
-    public var description: String {
-        var output: String = "["
-        if let firstNode = self.head {
-            output += String(describing: firstNode.value)
-            var currentNode = firstNode.next
-            while currentNode != nil {
-                output += ", "
-                output += String(describing: currentNode!.value)
-                currentNode = currentNode!.next
-            }
-        }
-        output += "]"
-
-        return output
-    }
-
     public func printInverseList() {
         var output: String = "["
         if let firstNode = self.tail {
@@ -178,4 +162,22 @@ public class LinkedList<T: Comparable> {
         print(output)
     }
 
+}
+
+extension LinkedList: CustomStringConvertible {
+    public var description: String {
+        var output: String = "["
+        if let firstNode = self.head {
+            output += String(describing: firstNode.value)
+            var currentNode = firstNode.next
+            while currentNode != nil {
+                output += ", "
+                output += String(describing: currentNode!.value)
+                currentNode = currentNode!.next
+            }
+        }
+        output += "]"
+
+        return output
+    }
 }
