@@ -147,7 +147,7 @@ public class LinkedList<T: Comparable> {
 
     }
 
-    public func printInverseList() {
+    public var describeInverse: String {
         var output: String = "["
         if let firstNode = self.tail {
             output += String(describing: firstNode.value)
@@ -159,9 +159,9 @@ public class LinkedList<T: Comparable> {
             }
         }
         output += "]"
-        print(output)
-    }
 
+        return output
+    }
 }
 
 extension LinkedList: CustomStringConvertible {

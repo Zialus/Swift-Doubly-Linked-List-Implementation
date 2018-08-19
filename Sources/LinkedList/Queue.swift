@@ -15,6 +15,12 @@ public class Queue<T: Comparable> {
         list.addLast(value)
     }
 
+    public func enqueue(_ values: [T]) {
+        for value in values {
+            list.addLast(value)
+        }
+    }
+
     public func dequeue() -> T? {
         if self.isEmpty {
             return nil
