@@ -1,4 +1,4 @@
-// swift-tools-version:4.0
+// swift-tools-version:5.0
 
 import PackageDescription
 
@@ -7,12 +7,15 @@ let package = Package(
     targets: [
         .target(
             name: "LinkedList",
-            dependencies: []),
+            dependencies: []
+        ),
         .target(
             name: "Main",
-            dependencies: ["LinkedList"]),
+            dependencies: ["LinkedList"]
+        ),
         .testTarget(
             name: "LinkedListTests",
-            dependencies: ["LinkedList"])
+            dependencies: ["LinkedList"]
+        )
     ]
 )
