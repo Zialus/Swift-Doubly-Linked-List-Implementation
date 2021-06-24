@@ -1,4 +1,4 @@
-// swift-tools-version:5.0
+// swift-tools-version:5.4
 
 import PackageDescription
 
@@ -9,7 +9,7 @@ let package = Package(
             name: "LinkedList",
             dependencies: []
         ),
-        .target(
+        .executableTarget(
             name: "Main",
             dependencies: ["LinkedList"]
         ),
