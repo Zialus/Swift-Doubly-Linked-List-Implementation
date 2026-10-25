@@ -1,0 +1,34 @@
+$schema: https://raw.githubusercontent.com/CodSpeedHQ/codspeed/refs/heads/main/schemas/codspeed.schema.json
+
+# Build the benchmark binary first with:
+#   swift build -c release --product Benchmarks -Xswiftc -g
+benchmarks:
+  - name: "LinkedList add_last"
+    exec: .build/release/Benchmarks add_last
+
+  - name: "LinkedList get_item"
+    exec: .build/release/Benchmarks get_item
+
+  - name: "LinkedList index_of"
+    exec: .build/release/Benchmarks index_of
+
+  - name: "LinkedList insert_item_head"
+    exec: .build/release/Benchmarks insert_item_head
+
+  - name: "LinkedList insert_item_middle"
+    exec: .build/release/Benchmarks insert_item_middle
+
+  - name: "LinkedList remove_item_middle"
+    exec: .build/release/Benchmarks remove_item_middle
+
+  - name: "LinkedList remove_last"
+    exec: .build/release/Benchmarks remove_last
+
+  - name: "LinkedList replace_item"
+    exec: .build/release/Benchmarks replace_item
+
+  - name: "LinkedList description"
+    exec: .build/release/Benchmarks description
+
+  - name: "Queue enqueue_dequeue"
+    exec: .build/release/Benchmarks queue_enqueue_dequeue
