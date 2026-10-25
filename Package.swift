@@ -13,6 +13,10 @@ let package = Package(
             name: "Main",
             dependencies: ["LinkedList"]
         ),
+        .executableTarget(
+            name: "Benchmarks",
+            dependencies: ["LinkedList"]
+        ),
         .testTarget(
             name: "LinkedListTests",
             dependencies: ["LinkedList"]
